@@ -132,7 +132,7 @@ var PersonInfoComponent = /** @class */ (function () {
             // 是的，闭包的块作用域！
             setTimeout(function timer() {
                 self_1.info = self_1.mockInfo.substr(0, j);
-            }, j * 200);
+            }, j * 10);
         };
         var this_1 = this;
         for (var i = 0; i <= this.mockInfo.length; i++) {

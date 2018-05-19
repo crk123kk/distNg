@@ -27,7 +27,7 @@
     // 获得权限
     // var reqPermission = Notification.requestPermission();
     // 点击按钮
-    document.querySelector('#button').addEventListener('click', function () {
+    document.querySelector('#connectMe').addEventListener('click', function () {
         if (Notification.permission == "granted") {
         var notification = new Notification("resume", {
             body: '可以有一个机会深入交流吗?',

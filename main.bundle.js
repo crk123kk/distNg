@@ -73,14 +73,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "ul > li {\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    text-align: center;\r\n}\r\nul > li > a {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}"
+module.exports = "ul > li {\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    text-align: center;\r\n}\r\nul > li > a {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>"
+module.exports = "<a class=\"button\" id=\"#connectMe\">联系我</a>\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\
 /***/ "./src/app/page/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"head\">\r\n    <h2>user index</h2>\r\n</div>\r\n<div class=\"user-img\">\r\n    <img src=\"assets/image/20.jpg\">\r\n</div>\r\n<a class=\"button\" (click)=\"navigateToPerson()\">Click Me</a>"
+module.exports = "<div class=\"head\">\r\n    <h2>user index</h2>\r\n</div>\r\n<div class=\"user-img\">\r\n    <img src=\"assets/image/20.jpg\">\r\n</div>\r\n<a class=\"button\" (click)=\"navigateToPerson()\">了解我</a>"
 
 /***/ }),
 
