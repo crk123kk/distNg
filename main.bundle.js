@@ -4,7 +4,7 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"app/page/person-info/person-info.module": [
+	"../app/page/person-info/person-info.module": [
 		"./src/app/page/person-info/person-info.module.ts",
 		"person-info.module"
 	]
@@ -48,8 +48,7 @@ var appRoutes = [
     { path: '', redirectTo: '/index', pathMatch: 'full' },
     { path: 'index', component: __WEBPACK_IMPORTED_MODULE_2__page_index_index_component__["a" /* UserIndexComponent */] },
     { path: 'person', component: __WEBPACK_IMPORTED_MODULE_3__page_person_person_component__["a" /* PersonComponent */] },
-    { path: 'person-info', loadChildren: 'app/page/person-info/person-info.module#PersonInfoModule' },
-    { path: '**', redirectTo: '/index', pathMatch: 'full' }
+    { path: 'person-info', loadChildren: '../app/page/person-info/person-info.module#PersonInfoModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -81,7 +80,7 @@ module.exports = "ul > li {\r\n    padding: 10px;\r\n    margin: 10px;\r\n    ba
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <a [routerLink] = \"['../index']\">index</a>\r\n</div>\r\n<router-outlet></router-outlet>"
+module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -170,14 +169,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/page/index/index.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\r\n.user-img{\r\n    text-align: center;\r\n}\r\n.user-img img{\r\n    border-radius: 50%;\r\n}\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/page/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3>user index</h3>\r\n<a [routerLink] = \"['../person']\">模块</a>\r\n<button (click)=\"navigateToPerson()\">Click Me</button>"
+module.exports = "<div class=\"head\">\r\n    <h2>user index</h2>\r\n</div>\r\n<div class=\"user-img\">\r\n    <img src=\"assets/image/20.jpg\">\r\n</div>\r\n<a class=\"button\" (click)=\"navigateToPerson()\">Click Me</a>"
 
 /***/ }),
 

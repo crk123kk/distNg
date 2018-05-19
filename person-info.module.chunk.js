@@ -82,14 +82,14 @@ var PersonInfoRoutingModule = /** @class */ (function () {
 /***/ "./src/app/page/person-info/person-info.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".text-info{\r\n    text-indent: 30px;\r\n}"
+module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\r\n.text-info{\r\n    text-indent: 30px;\r\n    min-height: 200px;\r\n    padding: 20px;\r\n    padding-top: 0;\r\n}\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/page/person-info/person-info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>模块一</h2>\r\n<a [routerLink] = \"['../person1']\">come back</a>\r\n<div class=\"text-info\">\r\n    {{info}}\r\n</div>\r\n<router-outlet></router-outlet>"
+module.exports = "<div class=\"head\">\r\n    <h2>模块一</h2>\r\n</div>\r\n<div class=\"text-info\">\r\n    {{info}}\r\n</div>\r\n<a class=\"button\" [routerLink] = \"['../person']\">come back</a>\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -99,6 +99,7 @@ module.exports = "<h2>模块一</h2>\r\n<a [routerLink] = \"['../person1']\">com
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonInfoComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_animations_router_animations__ = __webpack_require__("./src/app/share/animations/router-animations.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -109,12 +110,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var PersonInfoComponent = /** @class */ (function () {
     function PersonInfoComponent() {
+        // 添加@HostBinding属性添加到类中以设置这个路由组件元素的动画和样式
+        this.routeAnimation = true;
+        this.display = 'block';
+        this.position = 'absolute';
+        this.width = '100%';
     }
     PersonInfoComponent.prototype.ngOnInit = function () {
         this.info = '';
-        this.mockInfo = '    我来做个自我介绍好不好，我很厉害哟。。信不信我一巴掌拍过去';
+        this.mockInfo = '轻启轩窗，春燕盘旋，杨柳依依，芳草青青，花影斑驳，桃李芳菲尽，夏花次第开。五月的风儿，轻轻的柔柔的暖暖的亲吻过脸颊，鼻间新绿的清香泉水般“汩汩”的流淌。走过春天，躲过流年，站在五月的时空隧道中，时光竟然还是这般的如此匆匆。绿萝拂过衣襟，青云打湿诺言，红尘陌上，我们独自行走，风儿吹乱了发梢，惊扰了一地的千纸鹤。轻点朱颜淡描妆，树影婆娑，花儿摇曳。也许，我们都很好，只是时光不凑巧。';
         this.innerInfo();
     };
     PersonInfoComponent.prototype.innerInfo = function () {
@@ -124,18 +132,35 @@ var PersonInfoComponent = /** @class */ (function () {
             // 是的，闭包的块作用域！
             setTimeout(function timer() {
                 self_1.info = self_1.mockInfo.substr(0, j);
-            }, j * 250);
+            }, j * 200);
         };
         var this_1 = this;
         for (var i = 0; i <= this.mockInfo.length; i++) {
             _loop_1();
         }
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('@routeAnimation'),
+        __metadata("design:type", Object)
+    ], PersonInfoComponent.prototype, "routeAnimation", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('style.display'),
+        __metadata("design:type", Object)
+    ], PersonInfoComponent.prototype, "display", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('style.position'),
+        __metadata("design:type", Object)
+    ], PersonInfoComponent.prototype, "position", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('style.width'),
+        __metadata("design:type", Object)
+    ], PersonInfoComponent.prototype, "width", void 0);
     PersonInfoComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'person-info',
             template: __webpack_require__("./src/app/page/person-info/person-info.component.html"),
-            styles: [__webpack_require__("./src/app/page/person-info/person-info.component.css")]
+            styles: [__webpack_require__("./src/app/page/person-info/person-info.component.css")],
+            animations: [__WEBPACK_IMPORTED_MODULE_1__share_animations_router_animations__["a" /* slideInDownAnimation */]]
         }),
         __metadata("design:paramtypes", [])
     ], PersonInfoComponent);
