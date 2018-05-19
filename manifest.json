@@ -1,0 +1,14 @@
+{
+    "name": "resume",
+    "short_name": "resume",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "aqua",
+    "background_color": "aqua",
+    "icons": [{
+        "src": "assets/image/20.jpg",
+        "sizes": "211x211",
+        "type": "image/jpg"
+      }
+    ]
+  }
