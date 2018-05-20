@@ -10,6 +10,10 @@
         "sizes": "144x144",
         "type": "image/jpg"
       },{
+        "src": "assets/image/10.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },{
         "src": "assets/image/01.jpg",
         "sizes": "150x150",
         "type": "image/jpg"
