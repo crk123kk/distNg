@@ -4,6 +4,10 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../app/page/person-company/person-company.module": [
+		"./src/app/page/person-company/person-company.module.ts",
+		"person-company.module"
+	],
 	"../app/page/person-info/person-info.module": [
 		"./src/app/page/person-info/person-info.module.ts",
 		"person-info.module"
@@ -48,7 +52,8 @@ var appRoutes = [
     { path: '', redirectTo: '/index', pathMatch: 'full' },
     { path: 'index', component: __WEBPACK_IMPORTED_MODULE_2__page_index_index_component__["a" /* UserIndexComponent */] },
     { path: 'person', component: __WEBPACK_IMPORTED_MODULE_3__page_person_person_component__["a" /* PersonComponent */] },
-    { path: 'person-info', loadChildren: '../app/page/person-info/person-info.module#PersonInfoModule' }
+    { path: 'person-info', loadChildren: '../app/page/person-info/person-info.module#PersonInfoModule' },
+    { path: 'person-company', loadChildren: '../app/page/person-company/person-company.module#PersonCompanyModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -80,7 +85,7 @@ module.exports = "ul > li {\r\n    padding: 10px;\r\n    margin: 10px;\r\n    ba
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a class=\"button\" id=\"#connectMe\">联系我</a>\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "\r\n<div style=\"min-height: 350px;\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n<a class=\"button\" (click)=\"connectMe()\" id=\"#connectMe\">联系我</a>"
 
 /***/ }),
 
@@ -101,6 +106,25 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
     }
+    AppComponent.prototype.connectMe = function () {
+        if (Notification['permission'] == "granted") {
+            var notification = new Notification("resume", {
+                body: '可以有一个机会深入交流吗?',
+                icon: 'assets/image/20.jpg'
+            });
+            var text = document.querySelector('#text');
+            notification.onclick = function () {
+                text.innerHTML = 'crk已于' + new Date().toTimeString().split(' ')[0] + '申请工作职位';
+                notification.close();
+            };
+            setTimeout(function () {
+                notification.close();
+            }, 5000);
+        }
+        else {
+            alert('email: 1973657048@qq.com');
+        }
+    };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
@@ -232,7 +256,7 @@ module.exports = "ul > li {\r\n    padding: 10px;\r\n    margin: 10px;\r\n    ba
 /***/ "./src/app/page/person/person.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <ul>\r\n        <li><a [routerLink] = \"['../person-info']\">模块一</a></li>\r\n        <li><a href=\"#\">模块二</a></li>\r\n        <li><a href=\"#\">模块三</a></li>\r\n        <li><a href=\"#\">模块四</a></li>\r\n        <li><a href=\"#\">模块五</a></li>\r\n    </ul>\r\n</div>"
+module.exports = "<div>\r\n    <ul>\r\n        <li><a [routerLink] = \"['../person-info']\">模块一</a></li>\r\n        <li><a [routerLink] = \"['../person-company']\">模块二</a></li>\r\n        <li><a href=\"#\">模块三</a></li>\r\n        <li><a href=\"#\">模块四</a></li>\r\n        <li><a href=\"#\">模块五</a></li>\r\n    </ul>\r\n</div>"
 
 /***/ }),
 

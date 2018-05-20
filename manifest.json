@@ -6,10 +6,6 @@
     "theme_color": "aqua",
     "background_color": "aqua",
     "icons": [{
-        "src": "assets/image/10.jpg",
-        "sizes": "144x144",
-        "type": "image/jpg"
-      },{
         "src": "assets/image/10-0.png",
         "sizes": "144x144",
         "type": "image/png"
