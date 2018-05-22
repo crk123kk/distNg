@@ -29,10 +29,10 @@ var PersonCompanyRoutingModule = /** @class */ (function () {
     PersonCompanyRoutingModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(personCompanyRoutes)
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forChild(personCompanyRoutes)
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]
             ]
         })
     ], PersonCompanyRoutingModule);
@@ -46,14 +46,14 @@ var PersonCompanyRoutingModule = /** @class */ (function () {
 /***/ "./src/app/page/person-company/person-company.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}\r\n.company > li{\r\n    margin: 0 20px 10px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px dashed #666666;\r\n}\r\n.company > li > div{\r\n    padding: 5px 0;\r\n}\r\n.company > li > div > label{\r\n    display: inline-block;\r\n    width: 70px;\r\n    color: #999999;\r\n}\r\n.company > li > div > span{\r\n    color: #666666;\r\n}\r\n\r\n\r\n"
+module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}\r\n.company > li{\r\n    margin: 10px 20px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px dashed #666666;\r\n}\r\n.company > li > div{\r\n    padding: 5px 0;\r\n}\r\n.company > li > div > label{\r\n    display: inline-block;\r\n    width: 70px;\r\n    color: #999999;\r\n}\r\n.company > li > div > span{\r\n    color: #666666;\r\n}\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/page/person-company/person-company.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"head\">\r\n    <h2>模块二</h2>\r\n</div>\r\n<ul class=\"company\">\r\n    <li>\r\n        <div>\r\n            <label>工作时间：</label>\r\n            <span>2018.05.20 —— 2018.05.20 </span>\r\n        </div>\r\n        <div>\r\n            <label>所在公司：</label>\r\n            <span>深刻的房价来看圣诞节疯狂</span>\r\n        </div>\r\n        <div>\r\n            <label>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：</label>\r\n            <span>前端开发工程师</span>\r\n        </div>\r\n        <div>\r\n            <a class=\"\" href=\"a\">更多 >></a>\r\n        </div>\r\n    </li>\r\n    <li>\r\n        <div>\r\n            <label>工作时间：</label>\r\n            <span>2018.05.20 —— 2018.05.20 </span>\r\n        </div>\r\n        <div>\r\n            <label>所在公司：</label>\r\n            <span>深刻的房价来看圣诞节疯狂</span>\r\n        </div>\r\n        <div>\r\n            <label>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：</label>\r\n            <span>前端开发工程师</span>\r\n        </div>\r\n        <div>\r\n            <a class=\"\" href=\"a\">更多 >></a>\r\n        </div>\r\n    </li>\r\n</ul>\r\n<a class=\"button\" [routerLink] = \"['../person']\">come back</a>"
+module.exports = "\r\n<ul class=\"company\">\r\n    <li>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>太大方法：太大方法：太大方法：</span>\r\n        </div>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>深刻的房价来看圣诞节疯狂</span>\r\n        </div>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>太大方法：</span>\r\n        </div>\r\n        <div>\r\n            <a class=\"\" href=\"a\">更多 >></a>\r\n        </div>\r\n    </li>\r\n    <li>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>太大方法：太大方法：太大方法：</span>\r\n        </div>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>深刻的房价来看圣诞节疯狂</span>\r\n        </div>\r\n        <div>\r\n            <label>太大方法：</label>\r\n            <span>太大方法：</span>\r\n        </div>\r\n        <div>\r\n            <a class=\"\" href=\"a\">更多 >></a>\r\n        </div>\r\n    </li>\r\n</ul>"
 
 /***/ }),
 

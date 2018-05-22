@@ -29,10 +29,10 @@ var PersonInfoRoutingModule = /** @class */ (function () {
     PersonInfoRoutingModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(personInfoRoutes)
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forChild(personInfoRoutes)
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]
             ]
         })
     ], PersonInfoRoutingModule);
@@ -53,7 +53,7 @@ module.exports = ".head {\r\n    text-align: center;\r\n    padding: 20px;\r\n}\
 /***/ "./src/app/page/person-info/person-info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"head\">\r\n    <h2>模块一</h2>\r\n</div>\r\n<div class=\"text-info\">\r\n    {{info}}\r\n</div>\r\n<a class=\"button\" [routerLink] = \"['../person']\">come back</a>\r\n<router-outlet></router-outlet>"
+module.exports = "<div class=\"head\">\r\n    <h2>模块一</h2>\r\n</div>\r\n<div class=\"text-info\">\r\n    {{info}}\r\n</div>\r\n<!-- <a class=\"button\" [routerLink] = \"['../person']\">come back</a> -->\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 

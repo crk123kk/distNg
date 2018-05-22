@@ -10,4 +10,3 @@ self.addEventListener('fetch', event => {
     .then(cache => cache.add(urlStr))
   );
 });
-
