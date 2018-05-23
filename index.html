@@ -3,46 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Person info</title>
-  <base href="/distNg/">
+  <base href="/">
   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="./manifest.json">
 </head>
 <body>
   <app-root></app-root>
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
-<script>
-    // Register the service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-        // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    }
-
-    // 获得权限
-    // var reqPermission = Notification.requestPermission();
-    // 点击按钮
-    // document.querySelector('#connectMe').addEventListener('click', function () {
-    //     if (Notification.permission == "granted") {
-    //     var notification = new Notification("resume", {
-    //         body: '可以有一个机会深入交流吗?',
-    //         icon: 'assets/image/20.jpg'
-    //     });
-    //     var text = document.querySelector('#text');
-    //     notification.onclick = function() {
-    //         text.innerHTML = 'crk已于' + new Date().toTimeString().split(' ')[0] + '申请工作职位';
-    //         notification.close();    
-    //     };
-    //     setTimeout(function(){
-    //       notification.close(); 
-    //     },5000);
-    //   }else {
-    //     alert('bye bye');
-    //   }  
-    // });
-  </script>
 </html>

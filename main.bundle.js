@@ -4,23 +4,23 @@ webpackJsonp(["main"],{
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../app/page/person-company/person-company.module": [
+	"app/page/person-company/person-company.module": [
 		"./src/app/page/person-company/person-company.module.ts",
 		"person-company.module"
 	],
-	"../app/page/person-info/person-info.module": [
+	"app/page/person-info/person-info.module": [
 		"./src/app/page/person-info/person-info.module.ts",
 		"person-info.module"
 	],
-	"../app/page/person-say/person-say.module": [
+	"app/page/person-say/person-say.module": [
 		"./src/app/page/person-say/person-say.module.ts",
 		"person-say.module"
 	],
-	"../app/page/person-skill/person-skill.module": [
+	"app/page/person-skill/person-skill.module": [
 		"./src/app/page/person-skill/person-skill.module.ts",
 		"person-skill.module"
 	],
-	"../app/page/person-work/person-work.module": [
+	"app/page/person-work/person-work.module": [
 		"./src/app/page/person-work/person-work.module.ts",
 		"person-work.module"
 	]
@@ -76,11 +76,11 @@ var appRoutes = [
     { path: 'test2', component: __WEBPACK_IMPORTED_MODULE_5__page_test2_test2_component__["a" /* Test2Component */] },
     { path: 'test3', component: __WEBPACK_IMPORTED_MODULE_6__page_test3_test3_component__["a" /* Test3Component */] },
     { path: 'test4', component: __WEBPACK_IMPORTED_MODULE_7__page_test4_test4_component__["a" /* Test4Component */] },
-    { path: 'person-info', loadChildren: '../app/page/person-info/person-info.module#PersonInfoModule' },
-    { path: 'person-company', loadChildren: '../app/page/person-company/person-company.module#PersonCompanyModule' },
-    { path: 'person-say', loadChildren: '../app/page/person-say/person-say.module#PersonSayModule' },
-    { path: 'person-work', loadChildren: '../app/page/person-work/person-work.module#PersonWorkModule' },
-    { path: 'person-skill', loadChildren: '../app/page/person-skill/person-skill.module#PersonSkillModule' }
+    { path: 'person-info', loadChildren: 'app/page/person-info/person-info.module#PersonInfoModule' },
+    { path: 'person-company', loadChildren: 'app/page/person-company/person-company.module#PersonCompanyModule' },
+    { path: 'person-say', loadChildren: 'app/page/person-say/person-say.module#PersonSayModule' },
+    { path: 'person-work', loadChildren: 'app/page/person-work/person-work.module#PersonWorkModule' },
+    { path: 'person-skill', loadChildren: 'app/page/person-skill/person-skill.module#PersonSkillModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
