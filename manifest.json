@@ -3,8 +3,8 @@
     "short_name": "resume",
     "start_url": "./index.html",
     "display": "standalone",
-    "theme_color": "aqua",
-    "background_color": "aqua",
+    "theme_color": "#3d6b6b",
+    "background_color": "#3d6b6b",
     "icons": [{
         "src": "assets/image/10-0.png",
         "sizes": "144x144",
