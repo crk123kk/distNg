@@ -105,14 +105,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".crkApp {\r\n    overflow: hidden;\r\n    text-align: center;\r\n    background-color: #3d6b6b;\r\n    padding: 10px 0;\r\n}\r\n\r\n.crkApp > li {\r\n    display: inline-block;\r\n}\r\n\r\n.crkApp > li > a{\r\n    color: #fff;\r\n}\r\n\r\n.appBack {\r\n    float: right;\r\n    padding: 0 15px;\r\n}\r\n\r\n.appMain {\r\n    letter-spacing: 2px;\r\n}\r\n\r\n.appIndex {\r\n    float: left;\r\n    padding: 0 15px;\r\n}\r\n\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}"
+module.exports = ".crkApp {\r\n    overflow: hidden;\r\n    text-align: center;\r\n    background-color: #3d6b6b;\r\n    padding: 10px 0;\r\n}\r\n\r\n.crkApp > li {\r\n    display: inline-block;\r\n}\r\n\r\n.crkApp > li > a{\r\n    color: #fff;\r\n}\r\n\r\n.appBack {\r\n    float: right;\r\n    padding: 0 15px;\r\n}\r\n\r\n.appMain {\r\n    letter-spacing: 2px;\r\n}\r\n\r\n.appIndex {\r\n    float: left;\r\n    padding: 0 15px;\r\n}\r\n\r\n.button {\r\n    display: block;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    background: #3d6b6b;\r\n    color: #fff;\r\n    text-align: center;\r\n}\r\n\r\n.crkFooter {\r\n    position: fixed;\r\n    width: 100%;\r\n    bottom: 0;\r\n    overflow: hidden;\r\n    text-align: center;\r\n    background-color: #3d6b6b;\r\n    padding: 10px 0;\r\n}\r\n\r\n.crkFooter > li{\r\n    display: inline-block;\r\n    width: 40%;\r\n}\r\n\r\n.crkFooter > li > a{\r\n    color: #fff;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a [routerLink] = \"['../index']\">首页</a></li>\r\n        <li class=\"appMain\"><a [routerLink] = \"['../index']\">crk</a></li>\r\n        <li class=\"appBack\"><a [routerLink] = \"['../']\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<router-outlet></router-outlet>"
+module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a [routerLink] = \"['../index']\">首页</a></li>\r\n        <li class=\"appMain\"><a [routerLink] = \"['../index']\">crk</a></li>\r\n        <li class=\"appBack\"><a [routerLink] = \"['../']\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<div style=\"position: relative;\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<footer>\r\n    <ul class=\"crkFooter\">\r\n        <li (click)=\"connectMe()\"><a>我</a></li>\r\n        <li><a>退出</a></li>\r\n    </ul>\r\n</footer>"
 
 /***/ }),
 
