@@ -112,7 +112,7 @@ module.exports = ".crkApp {\r\n    overflow: hidden;\r\n    text-align: center;\
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a href=\"index\">首页</a></li>\r\n        <li class=\"appMain\"><a href=\"index\">crk</a></li>\r\n        <li class=\"appBack\"><a (click)=\"comeBack()\" href=\"javascript:;\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<router-outlet></router-outlet>"
+module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a [routerLink] = \"['../index']\">首页</a></li>\r\n        <li class=\"appMain\"><a [routerLink] = \"['../index']\">crk</a></li>\r\n        <li class=\"appBack\"><a [routerLink] = \"['../']\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -133,9 +133,6 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
     }
-    AppComponent.prototype.comeBack = function () {
-        history.go(-1);
-    };
     AppComponent.prototype.connectMe = function () {
         if (Notification['permission'] == "granted") {
             var notification = new Notification("resume", {
@@ -250,7 +247,7 @@ module.exports = ".index {\r\n    margin: 10px;\r\n    overflow: hidden;\r\n}\r\
 /***/ "./src/app/page/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [@initImageAnimation] = 'initState' class=\"index\">\r\n    <div class=\"index-head\">\r\n        <img src=\"assets/image/20.jpg\">\r\n    </div>\r\n    <div class=\"index-text\">\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ul [@listAnimation]=\"mockData.length\">\r\n    <li *ngFor=\"let data of mockData\">\r\n        <a href=\"{{data.goal}}\">{{data.label}}</a>\r\n    </li>\r\n</ul>"
+module.exports = "<div [@initImageAnimation] = 'initState' class=\"index\">\r\n    <div class=\"index-head\">\r\n        <img src=\"assets/image/20.jpg\">\r\n    </div>\r\n    <div class=\"index-text\">\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n        <div>\r\n            <label>水电:</label>\r\n            <span>斯蒂芬斯蒂芬</span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<ul [@listAnimation]=\"mockData.length\">\r\n    <li *ngFor=\"let data of mockData\">\r\n        <a [routerLink] = \"['../'+data.goal]\">{{data.label}}</a>\r\n    </li>\r\n</ul>"
 
 /***/ }),
 
