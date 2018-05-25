@@ -54,12 +54,18 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__page_test2_test2_component__ = __webpack_require__("./src/app/page/test2/test2.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__page_test3_test3_component__ = __webpack_require__("./src/app/page/test3/test3.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__page_test4_test4_component__ = __webpack_require__("./src/app/page/test4/test4.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__page_test5_test5_component__ = __webpack_require__("./src/app/page/test5/test5.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__page_test6_test6_component__ = __webpack_require__("./src/app/page/test6/test6.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_test7_test7_component__ = __webpack_require__("./src/app/page/test7/test7.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -76,6 +82,9 @@ var appRoutes = [
     { path: 'test2', component: __WEBPACK_IMPORTED_MODULE_5__page_test2_test2_component__["a" /* Test2Component */] },
     { path: 'test3', component: __WEBPACK_IMPORTED_MODULE_6__page_test3_test3_component__["a" /* Test3Component */] },
     { path: 'test4', component: __WEBPACK_IMPORTED_MODULE_7__page_test4_test4_component__["a" /* Test4Component */] },
+    { path: 'test5', component: __WEBPACK_IMPORTED_MODULE_8__page_test5_test5_component__["a" /* Test5Component */] },
+    { path: 'test6', component: __WEBPACK_IMPORTED_MODULE_9__page_test6_test6_component__["a" /* Test6Component */] },
+    { path: 'test7', component: __WEBPACK_IMPORTED_MODULE_10__page_test7_test7_component__["a" /* Test7Component */] },
     { path: 'person-info', loadChildren: 'app/page/person-info/person-info.module#PersonInfoModule' },
     { path: 'person-company', loadChildren: 'app/page/person-company/person-company.module#PersonCompanyModule' },
     { path: 'person-say', loadChildren: 'app/page/person-say/person-say.module#PersonSayModule' },
@@ -112,7 +121,7 @@ module.exports = ".crkApp {\r\n    overflow: hidden;\r\n    text-align: center;\
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a [routerLink] = \"['../index']\">首页</a></li>\r\n        <li class=\"appMain\"><a [routerLink] = \"['../index']\">crk</a></li>\r\n        <li class=\"appBack\"><a [routerLink] = \"['../']\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<div style=\"position: relative;\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<footer>\r\n    <ul class=\"crkFooter\">\r\n        <li (click)=\"connectMe()\"><a>我</a></li>\r\n        <li><a>退出</a></li>\r\n    </ul>\r\n</footer>"
+module.exports = "<header>\r\n    <ul class=\"crkApp\">\r\n        <li class=\"appIndex\"><a [routerLink] = \"['../index']\">首页</a></li>\r\n        <li class=\"appMain\"><a [routerLink] = \"['../index']\">crk</a></li>\r\n        <li class=\"appBack\"><a [routerLink] = \"['../']\">返回</a></li>\r\n    </ul>\r\n</header>\r\n\r\n<div style=\"position: relative;\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<!-- <footer>\r\n    <ul class=\"crkFooter\">\r\n        <li (click)=\"connectMe()\"><a>我</a></li>\r\n        <li><a>退出</a></li>\r\n    </ul>\r\n</footer> -->"
 
 /***/ }),
 
@@ -184,12 +193,22 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__page_test4_test4_component__ = __webpack_require__("./src/app/page/test4/test4.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__share_service_get_state_service__ = __webpack_require__("./src/app/share/service/get-state.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__share_service_Car_service__ = __webpack_require__("./src/app/share/service/Car.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__page_test5_test5_component__ = __webpack_require__("./src/app/page/test5/test5.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__page_test6_test6_component__ = __webpack_require__("./src/app/page/test6/test6.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__page_test7_test7_component__ = __webpack_require__("./src/app/page/test7/test7.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
 
 
 
@@ -215,7 +234,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__page_test_test_component__["a" /* TestComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__page_test2_test2_component__["a" /* Test2Component */],
                 __WEBPACK_IMPORTED_MODULE_9__page_test3_test3_component__["a" /* Test3Component */],
-                __WEBPACK_IMPORTED_MODULE_12__page_test4_test4_component__["a" /* Test4Component */]
+                __WEBPACK_IMPORTED_MODULE_12__page_test4_test4_component__["a" /* Test4Component */],
+                __WEBPACK_IMPORTED_MODULE_15__page_test5_test5_component__["a" /* Test5Component */],
+                __WEBPACK_IMPORTED_MODULE_16__page_test6_test6_component__["a" /* Test6Component */],
+                __WEBPACK_IMPORTED_MODULE_17__page_test7_test7_component__["a" /* Test7Component */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -225,7 +247,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_10__share_service_get_info_service__["a" /* GetInfoService */]
+                __WEBPACK_IMPORTED_MODULE_10__share_service_get_info_service__["a" /* GetInfoService */],
+                __WEBPACK_IMPORTED_MODULE_13__share_service_get_state_service__["a" /* GetStateService */],
+                __WEBPACK_IMPORTED_MODULE_14__share_service_Car_service__["a" /* CarService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
@@ -287,7 +311,7 @@ var UserIndexComponent = /** @class */ (function () {
         }, 500);
         setTimeout(function () {
             self.mockData = self.mockData1;
-        }, 2500);
+        }, 1500);
     };
     UserIndexComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -564,10 +588,11 @@ var Test3Component = /** @class */ (function () {
         // let _info = this.getInfo.loadInfo1();
         // console.log(_info);
         // this._http.get('../app/page/test/testHttp.json').subscribe(res=> console.log(res));
-        this.getInfo.loadInfo1().subscribe(function (res) {
+        var getInfo = this.getInfo.loadInfo1().subscribe(function (res) {
             console.log(res);
             _this.mockDatas = res.comtent;
             console.log(_this.mockDatas);
+            console.log(getInfo);
         });
     };
     Test3Component = __decorate([
@@ -596,7 +621,7 @@ module.exports = ""
 /***/ "./src/app/page/test4/test4.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3>test4</h3>"
+module.exports = "<h3>test4</h3>\r\n\r\n<button (click)=\"onFired()\">fire</button>\r\n<button (click)=\"onUnFired()\">unFire</button>\r\n\r\n<p *ngIf=\"engineStatus\" >engine fired</p>\r\n\r\n<button (click)=\"getInfo()\">get info</button>\r\n<p *ngIf=\"serviceStatus\">service status</p>\r\n<ul>\r\n    <li *ngFor=\"let data of mockDatas\">\r\n        <a>{{data.name}}</a>\r\n    </li>\r\n</ul>\r\n\r\n"
 
 /***/ }),
 
@@ -606,24 +631,614 @@ module.exports = "<h3>test4</h3>"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Test4Component; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__share_service_Car_service__ = __webpack_require__("./src/app/share/service/Car.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__share_service_get_state_service__ = __webpack_require__("./src/app/share/service/get-state.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
 
 var Test4Component = /** @class */ (function () {
-    function Test4Component() {
+    function Test4Component(_getInfo, carService, _getState) {
+        this._getInfo = _getInfo;
+        this.carService = carService;
+        this._getState = _getState;
+        this.engineStatus = false;
+        this.serviceStatus = false;
     }
+    Test4Component.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subscription1 = this.carService.engineStatus.subscribe(function (status) { _this.engineStatus = status; });
+        this.subscription2 = this._getState.serviceStatus.subscribe(function (status) { _this.serviceStatus = status; });
+    };
+    Test4Component.prototype.onFired = function () {
+        this.carService.changeEngineStatus(true);
+    };
+    Test4Component.prototype.onUnFired = function () {
+        this.carService.changeEngineStatus(false);
+    };
+    Test4Component.prototype.getInfo = function () {
+        var _this = this;
+        this.subscription3 = this._getInfo.loadInfo1().subscribe(function (res) {
+            console.log(res);
+            _this.mockDatas = res.comtent;
+            console.log(_this.mockDatas);
+            console.log(_this.subscription3);
+        });
+    };
+    Test4Component.prototype.ngDoCheck = function () {
+        console.log('sdfsdfsdf');
+        console.log(this.subscription3);
+        if (this.subscription3 && this.subscription3.closed) {
+            this.serviceStatus = this.subscription3.closed;
+        }
+        console.log('sdfsdfsdf');
+    };
     Test4Component = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'test4-component',
             template: __webpack_require__("./src/app/page/test4/test4.component.html"),
             styles: [__webpack_require__("./src/app/page/test4/test4.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */],
+            __WEBPACK_IMPORTED_MODULE_2__share_service_Car_service__["a" /* CarService */],
+            __WEBPACK_IMPORTED_MODULE_3__share_service_get_state_service__["a" /* GetStateService */]])
     ], Test4Component);
     return Test4Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/test5/test5.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/page/test5/test5.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h3>test5</h3>\r\n<button (click)=\"getInfo()\">get info</button>\r\n\r\n<button (click)=\"getInfo2()\">get info2</button>"
+
+/***/ }),
+
+/***/ "./src/app/page/test5/test5.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Test5Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var Test5Component = /** @class */ (function () {
+    function Test5Component(_getInfo) {
+        this._getInfo = _getInfo;
+    }
+    Test5Component.prototype.getInfo = function () {
+        this.loadInfo1();
+        this.loadInfo2();
+    };
+    Test5Component.prototype.getInfo2 = function () {
+        this.asyncGetInfo1();
+        // this.asyncPromiseTest();
+    };
+    Test5Component.prototype.asyncPromiseTest = function () {
+        var promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log("第一个定时器");
+                resolve('你好');
+            }, 3000);
+        });
+        promise.then(function (arg) {
+            setTimeout(function () {
+                console.log("第二个定时器");
+                console.log(arg);
+            }, 3000);
+        });
+    };
+    Test5Component.prototype.asyncGetInfo1 = function () {
+        /**
+         * 两层嵌套
+         */
+        // let _promise = new Promise((resolve,reject) =>{
+        //     this._getInfo.loadInfo1().subscribe(res=> {
+        //         console.log(res.comtent);
+        //         resolve('11');
+        //     });
+        // })
+        // _promise.then((arg) => {
+        //     this._getInfo.loadInfo2().subscribe(res=> {
+        //         console.log(res.comtent);
+        //         console.log(arg);
+        //         resolve('22');
+        //     });
+        // });
+        // _promise.then((arg) => {
+        //     this.loadInfo1();
+        //     console.log(arg);
+        // })
+        /**
+         * 两层嵌套:标准版，resovle()应该写在异步函数中，只有当异步函数执行完毕的时候才执行resolve()函数
+         * 这样才能保证当异步处理结束继续执行函数
+         */
+        // let _promise = new Promise((resolve,reject) =>{
+        //     this._getInfo.loadInfo1().subscribe(res=> {
+        //         console.log(res.comtent);
+        //         resolve('两层嵌套');
+        //     });
+        // })
+        // _promise.then((arg) => {
+        //     this.loadInfo2();
+        //     console.log(arg);
+        // })
+        /**
+         * 三层嵌套
+         * 三层嵌套比起两层嵌套来说多了一个返回new Promise,没有返回一个新的promise则无法继续执行
+         */
+        // let _promise1 = new Promise((resolve,reject) =>{
+        //     this._getInfo.loadInfo1().subscribe(res=> {
+        //         console.log(res.comtent);
+        //         resolve('11');
+        //     });
+        // })
+        // _promise1.then((arg) => {
+        //     console.log(arg);
+        //     return new Promise((resolve,reject) =>{
+        //         this._getInfo.loadInfo2().subscribe(res=> {
+        //             console.log(res.comtent);
+        //             resolve('22');
+        //         });
+        //     })
+        // }).then(() =>{
+        //     this.loadInfo1();
+        // })
+        /**
+         * 三层嵌套标准版
+         */
+        // new Promise((resolve,reject) =>{
+        //     this._getInfo.loadInfo1().subscribe(res=> {
+        //         console.log(res.comtent);
+        //         resolve('11');
+        //     });
+        // }).then(() => {
+        //     return new Promise((resolve,reject) =>{
+        //         this._getInfo.loadInfo2().subscribe(res=> {
+        //             console.log(res.comtent);
+        //             resolve('22');
+        //         });
+        //     })
+        // }).then(() =>{
+        //     return new Promise((resolve,reject) =>{
+        //         this._getInfo.loadInfo1().subscribe(res=> {
+        //             console.log(res.comtent);
+        //             resolve('11');
+        //         });
+        //     })
+        // })
+        /**
+         * 嵌套精简形式——推荐
+         * 需要不断的return一个新的promise，否则无法实现then的步骤一步一步的执行的效果
+         */
+        // this._asyncLoadInfo1()
+        // .then(() =>{
+        //     return this._asyncLoadInfo2();
+        // }).then(() => {
+        //     return this._asyncLoadInfo1();
+        // }).then(() => {
+        //     return this._asyncLoadInfo2();
+        // })
+    };
+    Test5Component.prototype._asyncLoadInfo1 = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this._getInfo.loadInfo1().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('11');
+            });
+        });
+    };
+    Test5Component.prototype._asyncLoadInfo2 = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this._getInfo.loadInfo2().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('22');
+            });
+        });
+    };
+    Test5Component.prototype.loadInfo1 = function () {
+        var _info1;
+        this._getInfo.loadInfo1().subscribe(function (res) {
+            _info1 = res.comtent;
+            console.log(_info1);
+        });
+        console.log('info1');
+    };
+    Test5Component.prototype.loadInfo2 = function () {
+        var _info2;
+        this._getInfo.loadInfo2().subscribe(function (res) {
+            _info2 = res.comtent;
+            console.log(_info2);
+        });
+        console.log('info2');
+    };
+    Test5Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "test5-component",
+            template: __webpack_require__("./src/app/page/test5/test5.component.html"),
+            styles: [__webpack_require__("./src/app/page/test5/test5.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */]])
+    ], Test5Component);
+    return Test5Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/test6/test6.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/page/test6/test6.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h3>test5</h3>\r\n<button (click)=\"getInfo()\">get info</button>\r\n\r\n<button (click)=\"getInfo2()\">get info2</button>"
+
+/***/ }),
+
+/***/ "./src/app/page/test6/test6.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Test6Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+var Test6Component = /** @class */ (function () {
+    function Test6Component(_getInfo) {
+        this._getInfo = _getInfo;
+    }
+    Test6Component.prototype.getInfo = function () {
+        this.loadInfo1();
+        this.loadInfo2();
+    };
+    Test6Component.prototype.getInfo2 = function () {
+        console.log(this.asyncGetInfo1().next());
+    };
+    // async function f() {
+    //     async function* gen() {
+    //         yield 'a';
+    //         yield 'b';
+    //         yield 'c';
+    //     }
+    //     return await takeAsync(gen());
+    // }
+    // f().then(function (result) {
+    //     console.log(result); // ['a', 'b', 'c']
+    // })
+    // const writer = openFile('someFile.txt');
+    // writer.next('hello'); // 立即执行
+    // writer.next('world'); // 立即执行
+    // await writer.return(); // 等待写入结束
+    Test6Component.prototype.asyncGetInfo1 = function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, this._asyncLoadInfo1()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, this._asyncLoadInfo2()];
+                case 2:
+                    _a.sent();
+                    return [4 /*yield*/, this._asyncLoadInfo1()];
+                case 3:
+                    _a.sent();
+                    return [4 /*yield*/, this._asyncLoadInfo2()];
+                case 4:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    };
+    Test6Component.prototype._asyncLoadInfo1 = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this._getInfo.loadInfo1().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('11');
+            });
+        });
+    };
+    Test6Component.prototype._asyncLoadInfo2 = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this._getInfo.loadInfo2().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('22');
+            });
+        });
+    };
+    Test6Component.prototype.loadInfo1 = function () {
+        var _info1;
+        this._getInfo.loadInfo1().subscribe(function (res) {
+            _info1 = res.comtent;
+            console.log(_info1);
+        });
+    };
+    Test6Component.prototype.loadInfo2 = function () {
+        var _info2;
+        this._getInfo.loadInfo2().subscribe(function (res) {
+            _info2 = res.comtent;
+            console.log(_info2);
+        });
+    };
+    Test6Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "test6-component",
+            template: __webpack_require__("./src/app/page/test6/test6.component.html"),
+            styles: [__webpack_require__("./src/app/page/test6/test6.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */]])
+    ], Test6Component);
+    return Test6Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/page/test7/test7.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/page/test7/test7.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h3>test5</h3>\r\n<button (click)=\"getInfo()\">get info</button>\r\n\r\n<button (click)=\"getInfo2()\">get info2</button>"
+
+/***/ }),
+
+/***/ "./src/app/page/test7/test7.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Test7Component; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+var Test7Component = /** @class */ (function () {
+    function Test7Component(_getInfo) {
+        this._getInfo = _getInfo;
+    }
+    Test7Component.prototype.getInfo = function () {
+        this.loadInfo1();
+        this.loadInfo2();
+    };
+    Test7Component.prototype.getInfo2 = function () {
+        this._asyncGetInfo().then(function (arg) {
+            console.log(arg);
+        });
+    };
+    /**
+     * 使用async await的形式相对于promise来说不用一直使用then的链式调用
+     * 这样的调用形式给人的感觉更方便和易懂
+     * async表示其函数内部包含异步行为
+     * await表示其等待其后的异步操作执行完毕之后再执行其它await的异步行为
+     * 一个一个await的操作执行
+     */
+    Test7Component.prototype._asyncGetInfo = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this._asyncLoadInfo1()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this._asyncLoadInfo2()];
+                    case 2:
+                        _a.sent();
+                        return [4 /*yield*/, this._asyncLoadInfo11()];
+                    case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this._asyncLoadInfo22()];
+                    case 4:
+                        _a.sent();
+                        return [2 /*return*/, 'sdf'];
+                }
+            });
+        });
+    };
+    /**
+     * _asyncLoadInfo1 和 _asyncLoadInfo11这两个方法的本质是一样的，
+     * 都是为了返回一个promise对象然后通过resovle方法
+     * 来判断是否继续执行异步操作，当执行了resolve的时候继续执行异步操作
+     * await 和 return的效果相同，因此可以将_asyncLoadInfo11 改写成 _asyncLoadInfo1
+     */
+    Test7Component.prototype._asyncLoadInfo1 = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, new Promise(function (resolve) {
+                            _this._getInfo.loadInfo1().subscribe(function (res) {
+                                console.log(res.comtent);
+                                resolve('11');
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Test7Component.prototype._asyncLoadInfo11 = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this._getInfo.loadInfo1().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('11');
+            });
+        });
+    };
+    Test7Component.prototype._asyncLoadInfo2 = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, new Promise(function (resolve) {
+                            _this._getInfo.loadInfo2().subscribe(function (res) {
+                                console.log(res.comtent);
+                                resolve('22');
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    Test7Component.prototype._asyncLoadInfo22 = function () {
+        var _this = this;
+        return new Promise(function (resolve) {
+            _this._getInfo.loadInfo2().subscribe(function (res) {
+                console.log(res.comtent);
+                resolve('22');
+            });
+        });
+    };
+    Test7Component.prototype.loadInfo1 = function () {
+        this._getInfo.loadInfo1().subscribe(function (res) {
+            console.log(res.comtent);
+        });
+        console.log('info1');
+    };
+    Test7Component.prototype.loadInfo2 = function () {
+        this._getInfo.loadInfo2().subscribe(function (res) {
+            console.log(res.comtent);
+        });
+        console.log('info2');
+    };
+    Test7Component = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "test7-component",
+            template: __webpack_require__("./src/app/page/test7/test7.component.html"),
+            styles: [__webpack_require__("./src/app/page/test7/test7.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */]])
+    ], Test7Component);
+    return Test7Component;
 }());
 
 
@@ -685,13 +1300,13 @@ var initImageAnimation = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations_
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* state */])('in', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ display: 'none' })),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* state */])('out', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ opacity: 'block' })),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* transition */])('in => out', [
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* keyframes */])([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* keyframes */])([
             Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ height: '0', opacity: 0, offset: 0 }),
             Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ height: '*', opacity: 1, offset: 1 }) // 200ms后高度自适应展开，元素展开(透明度为1)，动画帧在100%
         ]))
     ]),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* transition */])('out => in', [
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* keyframes */])([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* keyframes */])([
             Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ height: '*', opacity: 1, offset: 0 }),
             Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ height: '0', opacity: 0, offset: 1 })
         ]))
@@ -780,6 +1395,44 @@ can be found in the LICENSE file at http://angular.io/license
 
 /***/ }),
 
+/***/ "./src/app/share/service/Car.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CarService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CarService = /** @class */ (function () {
+    function CarService() {
+        var _this = this;
+        this.engineStatus = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* Observable */](function (observer) { return _this.observer = observer; }).share();
+    }
+    CarService.prototype.changeEngineStatus = function (newstatus) {
+        if (this.observer !== undefined)
+            this.observer.next(newstatus);
+    };
+    CarService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], CarService);
+    return CarService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/share/service/get-info.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -804,18 +1457,61 @@ var GetInfoService = /** @class */ (function () {
     }
     GetInfoService.prototype.loadInfo1 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info2.json').map(function (res) { return _this.handleResponse(res); });
+        return this._http.get('/assets/mock/info1.json').map(function (res) { return _this.handleResponse1(res); });
     };
-    GetInfoService.prototype.handleResponse = function (res) {
+    GetInfoService.prototype.handleResponse1 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo2 = function () {
+        var _this = this;
+        return this._http.get('/assets/mock/info2.json').map(function (res) { return _this.handleResponse2(res); });
+    };
+    GetInfoService.prototype.handleResponse2 = function (res) {
+        return res.json();
     };
     GetInfoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], GetInfoService);
     return GetInfoService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/share/service/get-state.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetStateService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GetStateService = /** @class */ (function () {
+    function GetStateService() {
+        var _this = this;
+        this.serviceStatus = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* Observable */](function (observer) { return _this.observer = observer; }).share();
+    }
+    GetStateService.prototype.changeServiceStatus = function (newstatus) {
+        if (this.observer !== undefined)
+            this.observer.next(newstatus);
+    };
+    GetStateService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], GetStateService);
+    return GetStateService;
 }());
 
 
