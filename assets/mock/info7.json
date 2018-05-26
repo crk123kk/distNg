@@ -1,0 +1,3 @@
+{
+    "skill":"本项目使用ng-cli搭建，使用MVVM结构的框架——angular的SPA项目，其中使用了angular的路由(包含懒加载)、angular的动画、ES6的promise、以及最后的pwa的相关技术(清单文件、service-work)"
+}

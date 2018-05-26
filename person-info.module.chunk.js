@@ -171,6 +171,42 @@ var PersonInfoModule = /** @class */ (function () {
 
 
 
+/***/ }),
+
+/***/ "./src/app/share/animations/router-animations.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return slideInDownAnimation; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_animations__ = __webpack_require__("./node_modules/@angular/animations/esm5/animations.js");
+
+// Component transition animations
+var slideInDownAnimation = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["m" /* trigger */])('routeAnimation', [
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* state */])('*', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({
+        opacity: 1,
+        transform: 'translateX(0)'
+    })),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* transition */])(':enter', [
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({
+            opacity: 0,
+            transform: 'translateY(100%)'
+        }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('0.2s ease-in')
+    ]),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* transition */])(':leave', [
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('0.5s ease-out', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({
+            opacity: 0,
+            transform: 'translateX(-100%)'
+        }))
+    ])
+]);
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
+
+
 /***/ })
 
 });
