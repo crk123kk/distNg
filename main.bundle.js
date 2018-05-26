@@ -545,7 +545,7 @@ var GetInfoService = /** @class */ (function () {
     }
     GetInfoService.prototype.loadInfo1 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info1.json').map(function (res) { return _this.handleResponse1(res); });
+        return this._http.get('./assets/mock/info1.json').map(function (res) { return _this.handleResponse1(res); });
     };
     GetInfoService.prototype.handleResponse1 = function (res) {
         return res.json();
