@@ -552,42 +552,42 @@ var GetInfoService = /** @class */ (function () {
     };
     GetInfoService.prototype.loadInfo2 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info2.json').map(function (res) { return _this.handleResponse2(res); });
+        return this._http.get('./assets/mock/info2.json').map(function (res) { return _this.handleResponse2(res); });
     };
     GetInfoService.prototype.handleResponse2 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo3 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info3.json').map(function (res) { return _this.handleResponse3(res); });
+        return this._http.get('./assets/mock/info3.json').map(function (res) { return _this.handleResponse3(res); });
     };
     GetInfoService.prototype.handleResponse3 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo4 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info4.json').map(function (res) { return _this.handleResponse4(res); });
+        return this._http.get('./assets/mock/info4.json').map(function (res) { return _this.handleResponse4(res); });
     };
     GetInfoService.prototype.handleResponse4 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo5 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info5.json').map(function (res) { return _this.handleResponse5(res); });
+        return this._http.get('./assets/mock/info5.json').map(function (res) { return _this.handleResponse5(res); });
     };
     GetInfoService.prototype.handleResponse5 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo6 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info6.json').map(function (res) { return _this.handleResponse6(res); });
+        return this._http.get('./assets/mock/info6.json').map(function (res) { return _this.handleResponse6(res); });
     };
     GetInfoService.prototype.handleResponse6 = function (res) {
         return res.json();
     };
     GetInfoService.prototype.loadInfo7 = function () {
         var _this = this;
-        return this._http.get('/assets/mock/info7.json').map(function (res) { return _this.handleResponse7(res); });
+        return this._http.get('./assets/mock/info7.json').map(function (res) { return _this.handleResponse7(res); });
     };
     GetInfoService.prototype.handleResponse7 = function (res) {
         return res.json();
