@@ -46,14 +46,14 @@ var PersonCompanyRoutingModule = /** @class */ (function () {
 /***/ "./src/app/page/person-company/person-company.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".company > li{\r\n    margin: 10px 20px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px dashed #666666;\r\n}\r\n\r\n.company > li > .head{\r\n    color: #333333;\r\n    font-weight: bold;\r\n    text-align: left;\r\n}\r\n\r\n.company > li > div{\r\n    padding: 5px 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.company > li > div > label{\r\n    display: block;\r\n    width: 25%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #999999;\r\n}\r\n\r\n.company > li > div > span{\r\n    display: block;\r\n    width: 69%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #666666;\r\n}\r\n\r\n\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/page/person-company/person-company.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ul class=\"company\" [@initImageAnimation] = 'initState'>\r\n    <li *ngFor=\"let data of dataList\">\r\n        <div class=\"head\">\r\n            {{data?.name}}\r\n        </div>\r\n        <div>\r\n            <label>\r\n                开始时间:\r\n            </label>\r\n            <span>\r\n                {{data?.startTime}}\r\n            </span>\r\n        </div>\r\n        <div>\r\n            <label>\r\n                结束时间:\r\n            </label>\r\n            <span>\r\n                {{data?.endTime}}\r\n            </span>\r\n        </div>\r\n        <div>\r\n            <label>\r\n                所属部门:\r\n            </label>\r\n            <span>\r\n                {{data?.belongTo}}\r\n            </span>\r\n        </div>\r\n        <div>\r\n            <label>\r\n                职位:\r\n            </label>\r\n            <span>\r\n                {{data?.work}}\r\n            </span>\r\n        </div>\r\n        <div class=\"duty\">\r\n            <label>\r\n                职责:\r\n            </label>\r\n            <span>\r\n                {{data?.duty}}\r\n            </span>\r\n        </div>\r\n    </li>\r\n</ul>"
+module.exports = "<show-info\r\n    [showInfo] = \"dataList\"\r\n>\r\n</show-info>"
 
 /***/ }),
 
@@ -64,7 +64,6 @@ module.exports = "\r\n<ul class=\"company\" [@initImageAnimation] = 'initState'>
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonCompanyComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__share_animations_initImage_animations__ = __webpack_require__("./src/app/share/animations/initImage-animations.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76,14 +75,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var PersonCompanyComponent = /** @class */ (function () {
     function PersonCompanyComponent(_getInfo) {
         this._getInfo = _getInfo;
-        this.initState = 'in';
     }
     PersonCompanyComponent.prototype.ngOnInit = function () {
-        this.initPage();
         this.loadInfo2();
     };
     PersonCompanyComponent.prototype.loadInfo2 = function () {
@@ -92,18 +88,11 @@ var PersonCompanyComponent = /** @class */ (function () {
             _this.dataList = res.companyList;
         });
     };
-    PersonCompanyComponent.prototype.initPage = function () {
-        var self = this;
-        setTimeout(function () {
-            self.initState = 'out';
-        }, 500);
-    };
     PersonCompanyComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'person-company',
             template: __webpack_require__("./src/app/page/person-company/person-company.component.html"),
-            styles: [__webpack_require__("./src/app/page/person-company/person-company.component.css")],
-            animations: [__WEBPACK_IMPORTED_MODULE_2__share_animations_initImage_animations__["a" /* initImageAnimation */]]
+            styles: [__webpack_require__("./src/app/page/person-company/person-company.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */]])
     ], PersonCompanyComponent);
@@ -124,12 +113,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__company_routing_module__ = __webpack_require__("./src/app/page/person-company/company-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__person_company_component__ = __webpack_require__("./src/app/page/person-company/person-company.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__share_module_share_component_module__ = __webpack_require__("./src/app/share/module/share-component.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -144,7 +135,8 @@ var PersonCompanyModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_common__["b" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_1__company_routing_module__["a" /* PersonCompanyRoutingModule */]
+                __WEBPACK_IMPORTED_MODULE_4__share_module_share_component_module__["a" /* ShareComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_1__company_routing_module__["a" /* PersonCompanyRoutingModule */],
             ],
         })
     ], PersonCompanyModule);

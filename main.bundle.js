@@ -173,12 +173,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__share_service_get_state_service__ = __webpack_require__("./src/app/share/service/get-state.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_person_project_person_project_component__ = __webpack_require__("./src/app/page/person-project/person-project.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__share_module_share_component_module__ = __webpack_require__("./src/app/share/module/share-component.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -199,7 +201,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__page_index_index_component__["a" /* UserIndexComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__page_person_person_component__["a" /* PersonComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__page_person_project_person_project_component__["a" /* PersonProjectComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__page_person_project_person_project_component__["a" /* PersonProjectComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -207,15 +209,85 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_8__angular_http__["c" /* JsonpModule */],
                 __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_11__share_module_share_component_module__["a" /* ShareComponentModule */],
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__share_service_get_info_service__["a" /* GetInfoService */],
                 __WEBPACK_IMPORTED_MODULE_9__share_service_get_state_service__["a" /* GetStateService */]
             ],
+            exports: [],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/component/show-info/show-info.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ".showInfo {\r\n    margin: 10px 20px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px dashed #666666;\r\n}\r\n.showInfo > li{\r\n    padding: 5px 0;\r\n    overflow: hidden;\r\n}\r\n.showInfo > .head{\r\n    color: #333333;\r\n    font-weight: bold;\r\n    text-align: left;\r\n}\r\n.showInfo > li > label{\r\n    display: block;\r\n    width: 25%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #999999;\r\n}\r\n.showInfo > li > span{\r\n    display: block;\r\n    width: 69%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #666666;\r\n}\r\n\r\n\r\n"
+
+/***/ }),
+
+/***/ "./src/app/component/show-info/show-info.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div [@initImageAnimation] = 'initState'>\r\n    <ul class=\"showInfo\" *ngFor=\"let data of dataList\">\r\n        <li class=\"head\" *ngIf=\"data?.name.length > 0\">\r\n            {{data?.name}}\r\n        </li>\r\n        <li *ngFor=\"let detail of data?.detail\">\r\n            <label>\r\n                {{detail.key}}\r\n            </label>\r\n            <span>\r\n                {{detail.value}}\r\n            </span>\r\n        </li>\r\n    </ul>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/component/show-info/show-info.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowInfoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_animations_initImage_animations__ = __webpack_require__("./src/app/share/animations/initImage-animations.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ShowInfoComponent = /** @class */ (function () {
+    function ShowInfoComponent() {
+        this.initState = 'in';
+        this.dataList = [];
+    }
+    ShowInfoComponent.prototype.ngOnChanges = function () {
+        if (this.showInfo && this.showInfo['length'] > 0) {
+            this.dataList = this.showInfo;
+            this.initPage();
+        }
+    };
+    ShowInfoComponent.prototype.initPage = function () {
+        var self = this;
+        setTimeout(function () {
+            self.initState = 'out';
+        }, 500);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], ShowInfoComponent.prototype, "showInfo", void 0);
+    ShowInfoComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "show-info",
+            template: __webpack_require__("./src/app/component/show-info/show-info.component.html"),
+            styles: [__webpack_require__("./src/app/component/show-info/show-info.component.css")],
+            animations: [__WEBPACK_IMPORTED_MODULE_1__share_animations_initImage_animations__["a" /* initImageAnimation */]]
+        })
+    ], ShowInfoComponent);
+    return ShowInfoComponent;
 }());
 
 
@@ -272,7 +344,7 @@ var UserIndexComponent = /** @class */ (function () {
             _this._getInfo.loadInfo1().subscribe(function (res) {
                 _this.baseInfo = res.baseInfo;
                 _this.mockData1 = res.baseType;
-                resolve('11');
+                resolve();
             });
         }).then(function () {
             _this.initPage();
@@ -380,14 +452,14 @@ var PersonProjectComponent = /** @class */ (function () {
 /***/ "./src/app/page/person/person.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".work > li{\r\n    margin: 10px 20px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px dashed #666666;\r\n}\r\n\r\n.work > li > .head{\r\n    color: #333333;\r\n    font-weight: bold;\r\n    text-align: left;\r\n}\r\n\r\n.work > li > div{\r\n    padding: 5px 0;\r\n    overflow: hidden;\r\n}\r\n\r\n.work > li > div > label{\r\n    display: block;\r\n    width: 25%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #999999;\r\n}\r\n\r\n.work > li > div > span{\r\n    display: block;\r\n    width: 69%;\r\n    float: left;\r\n    margin-bottom: -5000px;\r\n    padding-bottom: 5000px;\r\n    color: #666666;\r\n}\r\n\r\n\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ "./src/app/page/person/person.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"work\" [@initImageAnimation] = 'initState'>\r\n    <li>\r\n        <div *ngFor=\"let data of dataList\">\r\n            <label>\r\n                {{data.key}}\r\n            </label>\r\n            <span>\r\n                {{data.value}}\r\n            </span>\r\n        </div>\r\n    </li>\r\n</ul>"
+module.exports = "<show-info\r\n    [showInfo] = \"dataList\"\r\n>\r\n</show-info>"
 
 /***/ }),
 
@@ -398,7 +470,6 @@ module.exports = "<ul class=\"work\" [@initImageAnimation] = 'initState'>\r\n   
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__ = __webpack_require__("./src/app/share/service/get-info.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__share_animations_initImage_animations__ = __webpack_require__("./src/app/share/animations/initImage-animations.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -410,37 +481,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var PersonComponent = /** @class */ (function () {
     function PersonComponent(_getInfo) {
         this._getInfo = _getInfo;
         this.dataList = [];
-        this.initState = 'in';
     }
     PersonComponent.prototype.ngOnInit = function () {
-        this.initPage();
         this._asyncLoadInfo2();
     };
     PersonComponent.prototype._asyncLoadInfo2 = function () {
         var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this._getInfo.loadInfo2().subscribe(function (res) {
-                _this.dataList = res.personInfo;
-            });
+        this._getInfo.loadInfo2().subscribe(function (res) {
+            _this.dataList = res.personInfo;
         });
-    };
-    PersonComponent.prototype.initPage = function () {
-        var self = this;
-        setTimeout(function () {
-            self.initState = 'out';
-        }, 500);
     };
     PersonComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'person',
             template: __webpack_require__("./src/app/page/person/person.component.html"),
-            styles: [__webpack_require__("./src/app/page/person/person.component.css")],
-            animations: [__WEBPACK_IMPORTED_MODULE_2__share_animations_initImage_animations__["a" /* initImageAnimation */]]
+            styles: [__webpack_require__("./src/app/page/person/person.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__share_service_get_info_service__["a" /* GetInfoService */]])
     ], PersonComponent);
@@ -517,6 +576,46 @@ Copyright 2017-2018 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */ 
+
+
+/***/ }),
+
+/***/ "./src/app/share/module/share-component.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShareComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_show_info_show_info_component__ = __webpack_require__("./src/app/component/show-info/show-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ShareComponentModule = /** @class */ (function () {
+    function ShareComponentModule() {
+    }
+    ShareComponentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__component_show_info_show_info_component__["a" /* ShowInfoComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__component_show_info_show_info_component__["a" /* ShowInfoComponent */]
+            ]
+        })
+    ], ShareComponentModule);
+    return ShareComponentModule;
+}());
+
 
 
 /***/ }),

@@ -3,24 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Person info</title>
-  <base href="/distNg/">
+  <base href="/">
   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="./manifest.json">
 </head>
 <body>
   <app-root></app-root>
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
-<script>
-    // Register the service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-        // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    }
-  </script>
 </html>
